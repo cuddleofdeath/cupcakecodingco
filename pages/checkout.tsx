@@ -20,6 +20,12 @@ import { shopAddress, usdcAddress } from './../lib/addresses'
 import calculatePrice from './../lib/calculatePrice'
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base'
 
+export const config = {
+  api: {
+    bodyParser: false,
+    externalResolver: true,
+  },
+}
 export default function Checkout() {
   const router = useRouter()
   const { connection } = useConnection()

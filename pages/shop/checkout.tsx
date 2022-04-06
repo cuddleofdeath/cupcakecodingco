@@ -18,6 +18,12 @@ import PageHeading from '../../components/PageHeading'
 import { shopAddress, usdcAddress } from '../../lib/addresses'
 import calculatePrice from '../../lib/calculatePrice'
 
+export const config = {
+  api: {
+    bodyParser: false,
+    externalResolver: true,
+  },
+}
 export default function Checkout() {
   const router = useRouter()
 
